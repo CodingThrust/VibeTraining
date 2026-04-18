@@ -5,7 +5,7 @@ title: Setup Guide
 
 # AI Coding Tool Setup Guide
 
-This guide covers installation and configuration of four mainstream AI coding tools, tailored for university students in China.
+This guide covers installation and configuration of mainstream AI coding tools, tailored for university students in China.
 
 > **Network note**: Some tools require access to overseas services. Make sure you have a working proxy (e.g. Clash, V2Ray). Common default ports: Clash `7890`, V2Ray `10808`.
 
@@ -23,9 +23,9 @@ This guide covers installation and configuration of four mainstream AI coding to
 
 ---
 
-## 1. Claude Code — Best Support to Skills
+## 1. Claude Code - Best Support for Skills and Harnesses
 
-Claude Code is Anthropic's official AI coding assistant. It can autonomously plan, edit, run tests, and fix issues. Available as a terminal CLI, VS Code / JetBrains extension, desktop app, and web interface.
+Claude Code is Anthropic's official AI coding assistant. It can autonomously plan, edit, run tests, call tools, and fix issues, which makes it a strong fit for skill-plus-tool harnesses. Available as a terminal CLI, VS Code / JetBrains extension, desktop app, and web interface.
 
 > **Docs**: [code.claude.com/docs](https://code.claude.com/docs/en/overview)
 >

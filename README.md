@@ -1,10 +1,10 @@
-# HKUST-Got-Skills
+# VibeYoga
 
-**Design a skill to automate and accelerate scientific discovery.**
+**Build vibe coding harnesses with skills and tools.**
 
-A cross-campus hackathon at HKUST(GZ) and HKUST(CWB) where teams build AI coding skills for scientific workflows. Invitation only.
+An irregular hackathon event at HKUST(GZ) where teams turn real research workflows into reusable AI coding harnesses: skill instructions, command line tools, MCP servers, tests, and agent workflows. Invitation only.
 
-**Website**: https://giggleliu.github.io/HKUST-Got-Skills/
+**Website**: https://codingthrust.github.io/VibeTraining/
 
 ## Local Development
 

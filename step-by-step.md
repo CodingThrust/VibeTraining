@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Instruction
+title: Guide
 ---
 
 <style>
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-# Step-by-Step Guide
+# Step-by-Step Harness Guide
 
-Follow these prompts in order inside **Claude Code** or **Codex CLI**. Type each prompt, wait for the AI to finish, then move to the next.
+Follow these prompts in order inside **Claude Code** or **Codex CLI**. Type each prompt, wait for the AI to finish, then move to the next. The target output is a reusable vibe coding harness: instructions plus reliable executable pieces such as scripts, CLIs, MCP servers, tests, and docs.
 
 Prompts you need to type are marked with <span style="color: #b5e853; font-weight: bold;">▶ Prompt</span>.
 
@@ -74,7 +74,7 @@ Prompts you need to type are marked with <span style="color: #b5e853; font-weigh
 
 ---
 
-# Part A: Build a Coding Project
+# Part A: Build the Tool Layer
 
 ## Step 1: Install Tools
 
@@ -167,9 +167,9 @@ This creates a `CLAUDE.md` or `AGENTS.md` that helps the AI understand your proj
 
 ---
 
-# Part B: Create a Skill
+# Part B: Package a Vibe Coding Harness
 
-A **skill** is a reusable prompt file that teaches the AI a specific workflow. Skills live in the [superpowers](https://github.com/obra/superpowers) framework and can be shared with others. See the [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) for background.
+A **harness** is the reusable system around a workflow. It can include a skill file that teaches the AI how to reason, scripts or CLIs for deterministic operations, MCP servers for external systems, and tests that keep the workflow reliable. See the [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) for the skill layer background.
 
 ## Step 1: Install Tools
 
@@ -183,29 +183,29 @@ Install https://github.com/obra/superpowers and gh (GitHub CLI) if not already i
 
 ---
 
-## Step 2: Confirm Your Idea Is Suited for a Skill
+## Step 2: Choose Skill, Tool, or Both
 
 <div class="prompt" markdown="1">
 ```
-I want to <describe what the skill does>. Is this task suited to be implemented as a skill?
+I want to automate <describe the workflow>. Should this be a skill, a CLI/MCP tool, or a skill + tool harness?
 ```
 </div>
 
-For example: *"I want to automate literature survey from a list of arxiv links. Is this task suited to be implemented as a skill?"*
+For example: *"I want to automate literature survey from a list of arxiv links. Should this be a skill, a CLI/MCP tool, or a skill + tool harness?"*
 
 ---
 
-## Step 3: Brainstorm Your Skill Idea
+## Step 3: Brainstorm Your Harness Idea
 
 <div class="prompt" markdown="1">
 ```
-Brainstorm with me: I want to create a skill that <describe what the skill does>. use superpower skill
+Brainstorm with me: I want to create a vibe coding harness for <describe the workflow>. It may include skills, scripts, CLI tools, or MCP servers. use superpower skill
 ```
 </div>
 
 ---
 
-## Step 4: Create the Skill
+## Step 4: Create the Skill and Tool Parts
 
 <div class="prompt" markdown="1">
 ```
@@ -213,11 +213,11 @@ Brainstorm with me: I want to create a skill that <describe what the skill does>
 ```
 </div>
 
-This guides you through creating, naming, and writing the skill file.
+Use this when the harness needs a reusable instruction layer. If the workflow also needs deterministic execution, ask the agent to design the CLI, MCP server, Makefile target, or script interface before coding it.
 
 ---
 
-## Step 5: Test the Skill
+## Step 5: Test the Harness
 
 <div class="prompt" markdown="1">
 ```
@@ -225,7 +225,7 @@ This guides you through creating, naming, and writing the skill file.
 ```
 </div>
 
-This simulates a user interacting with your skill and produces a test report.
+This simulates a user interacting with your skill layer and produces a test report. Also run the normal software tests for any scripts, CLIs, MCP servers, or libraries included in the harness.
 
 ---
 
@@ -251,7 +251,7 @@ Upload code to GitHub with gh (if gh is missing, install and configure it first)
 
 <div class="prompt" markdown="1">
 ```
-Generate Makefile/skills file to automate tasks
+Generate Makefile targets, skill files, and CLI scripts to automate tasks
 ```
 </div>
 
@@ -286,7 +286,7 @@ Questions worth asking the AI to deepen your project:
 Useful references:
 
 - [Makefile example](https://github.com/CodingThrust/problem-reductions/blob/main/Makefile) — automate your build
-- [Agentic tests example](https://github.com/GiggleLiu/agentic-tests) — test your skill with AI agents
+- [Agentic tests example](https://github.com/GiggleLiu/agentic-tests) — test your harness with AI agents
 - [mdBook](https://rust-lang.github.io/mdBook/) — documentation tool for Rust projects
 - [D3.js](https://d3js.org/) — interactive visualizations for documentation
 

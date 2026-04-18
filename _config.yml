@@ -1,5 +1,7 @@
-title: HKUST-Got-Skills
-description: "Design a skill to automate and accelerate scientific discovery"
+title: VibeYoga
+description: "HKUST(GZ) vibe coding hackathon for skills, tools, and agent harnesses"
+url: "https://codingthrust.github.io"
+baseurl: "/VibeTraining"
 theme: jekyll-theme-hacker
 show_downloads: false
 
@@ -13,7 +15,7 @@ nav:
     url: /program
   - title: Resources
     url: /resources
-  - title: Instruction
+  - title: Guide
     url: /step-by-step
-  - title: Skills
-    url: /skills
+  - title: Gallery
+    url: /gallery

@@ -10,7 +10,9 @@ title: Program
 
 # Program
 
-Goal: build a working skill and release it on GitHub ([links](skills)). Teams of size 1-4.
+Goal: build a working vibe coding harness and release it on GitHub ([gallery](gallery)). Teams of size 1-4.
+
+This page records the 30 March - 1 April 2026 HKUST(GZ) edition. Future VibeYoga hackathons happen irregularly and can reuse this format.
 
 ## Day 1 - 30th March (Main stage: W1-5F VR room)
 

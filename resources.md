@@ -5,6 +5,8 @@ title: Resources
 
 # Resources
 
+Use these resources to assemble a vibe coding harness. In practice, a good harness usually has both an **instruction layer** and a **tool layer**: skills tell the AI agent how to reason and coordinate work; CLIs, MCP servers, scripts, and tests make repeated actions reliable.
+
 ## AI Coding Tools
 
 | Tool | Type | Link |
@@ -21,14 +23,14 @@ Get your AI coding tools ready before the hackathon:
 - [Documentation: The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 - [Video: Agentic Coding (MIT Open Course)](https://missing.csail.mit.edu/2026/agentic-coding/)
 
-Vibe coding blog posts (Advertisement):
+Vibe coding blog posts:
 
 - [Vibe Coding Done Right](https://www.jinguo-group.science/vibe-coding/) — Test-driven approach to AI-generated code
 - [Git Workflow for AI Coding](https://www.jinguo-group.science/git-workflow/) — Using Git to manage human-AI collaboration
 - [Sustainable Automation](https://www.jinguo-group.science/sustainable-automation/) — CLAUDE.md and Skills for persistent AI workflows
 - [中文知乎文章](https://zhuanlan.zhihu.com/p/2018713858873771812) — 中文介绍如何使用Claude Code和Skills
 
-## MCP Servers and Command Line Tools
+## Harness Tool Layer: MCP Servers and Command Line Tools
 
 MCP (Model Context Protocol) servers extend AI coding agents with external tool access. CLI tools can be invoked directly from the terminal by agents. Star counts (approximate) are shown for reference.
 
@@ -124,9 +126,9 @@ MCP (Model Context Protocol) servers extend AI coding agents with external tool 
 - [entr](https://github.com/eradman/entr) — CLI: Run commands when files change (5.5k stars)
 - [make / cmake / ninja](https://ninja-build.org/) — CLI: Build automation
 
-## Skills for Researchers
+## Harness Instruction Layer: Skills for Researchers
 
-Skills are reusable instruction files (SKILL.md) that teach AI coding agents domain-specific workflows. Unlike MCP servers that provide _tools_, skills provide **knowledge and methodology** — they guide the agent on _how_ to approach a task.
+Skills are reusable instruction files (SKILL.md) that teach AI coding agents domain-specific workflows. In a harness, skills should describe goals, decision points, verification checks, and when to call tools. MCP servers and CLIs provide executable capabilities; skills provide **knowledge and methodology**.
 
 ### How to Install a Skill
 
@@ -144,7 +146,7 @@ npx skillkit@latest init
 
 Skills placed in `.claude/skills/` are automatically discovered by Claude Code.
 
-### Recommended Skills
+### Recommended Skill Sources
 
 Listed by GitHub stars and relevance to research. All repos have >50 stars.
 
