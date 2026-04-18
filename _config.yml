@@ -11,8 +11,6 @@ sass:
 nav:
   - title: Home
     url: /
-  - title: Program
-    url: /program
   - title: Resources
     url: /resources
   - title: Guide

@@ -7,18 +7,6 @@ title: Resources
 
 Use these resources to assemble a vibe coding harness. In practice, a good harness usually has both an **instruction layer** and a **tool layer**: skills tell the AI agent how to reason and coordinate work; CLIs, MCP servers, scripts, and tests make repeated actions reliable.
 
-## AI Coding Tools
-
-| Tool | Type | Link |
-|------|------|------|
-| Claude Code | Terminal CLI | [code.claude.com](https://code.claude.com) |
-| Codex CLI | Terminal CLI | [github.com/openai/codex](https://github.com/openai/codex) |
-| OpenCode | Terminal CLI | [opencode.ai](https://opencode.ai) |
-
-Get your AI coding tools ready before the hackathon:
-
-- [AI Coding Tool Setup Guide](setup-guide) — Installation instructions for Claude Code, Cursor, Codex CLI, and OpenCode
-
 ## Learning Resources
 - [Documentation: The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 - [Video: Agentic Coding (MIT Open Course)](https://missing.csail.mit.edu/2026/agentic-coding/)

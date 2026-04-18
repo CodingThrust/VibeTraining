@@ -28,7 +28,8 @@ Please prepare these before coming to an event:
 
 1. **A Bash or Zsh terminal** — Linux and macOS include one by default. Windows participants should use WSL 2.
 2. **A project issue** — [File an issue](https://github.com/CodingThrust/VibeTraining/issues/new?template=project-idea.yml) before the event describing what workflow you want to automate or what harness you want to build.
-3. **A Codex or Claude Code account** — Install the tool and confirm that you can log in before arriving (Note: a $20 plan might not be enough).
+3. **A Codex or Claude Code account** — Install the tool and confirm that you can log in before arriving (Note: a $20 plan might not be enough). Please refer to the [AI Coding Tool Setup Guide](setup-guide) for installation instructions.
+
 
 ## Communication
 [GitHub discussions](https://github.com/CodingThrust/VibeTraining/discussions)
