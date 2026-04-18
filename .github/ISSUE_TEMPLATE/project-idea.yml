@@ -1,5 +1,6 @@
-name: Project Idea
-description: Submit a hackathon project idea
+name: Harness Proposal
+description: Propose a VibeYoga harness system to build during the hackathon
+title: "[Harness] "
 labels: ["project-idea"]
 body:
   - type: markdown
@@ -7,52 +8,97 @@ body:
       value: |
         ## Need Inspiration?
 
-        Think about what repetitive or time-consuming task in your research could AI handle for you. Here are some directions:
+        Think about a real research or development project where an AI coding agent could help if it had the right harness system: knowledge base, tools, skills, tests, and onboarding design. Here are some directions:
 
-        - **Experiment automation** — automate data collection, parameter sweeps, or result analysis
-        - **Coding and testing** — generate, test, and debug scientific code
-        - **Paper writing** — drafting, notation checking, citation management
-        - **Literature survey** — searching, summarizing, and organizing papers
-        - **Education** — lead students through a research project step by step
-        - **Brainstorming** — exploring new research directions with AI-assisted ideation
+        - **Research workflow harness** - repeatable literature review, simulation, analysis, or paper-writing workflows
+        - **Scientific coding harness** - project-specific instructions, tests, CI, benchmark scripts, and review prompts
+        - **Tool harness** - CLI tools, scripts, Makefile targets, or MCP servers that agents can call reliably
+        - **Knowledge harness** - curated docs, examples, datasets, APIs, and domain notes that help agents work in context
+        - **Onboarding harness** - tutorials or guided workflows that help newcomers use a complex codebase or research tool
 
-        Check our [Resources page](https://giggleliu.github.io/HKUST-Got-Skills/resources) for existing skills, MCP servers, and tools you can use or get inspired by.
+        Check the [Resources page](https://codingthrust.github.io/VibeTraining/resources) for AI coding tools, skills, MCP servers, and command line tools you can use or get inspired by.
 
         ## What Should I Build?
 
-        | Type | Best for | Example |
-        |------|----------|---------|
-        | **Skill** | Interactive workflows where the AI walks you through multiple steps | Paper writing assistant, experiment design guide |
-        | **MCP Server** | Connecting AI to outside data sources so it can look things up for you | Search your lab's database, fetch papers from arXiv |
-        | **Command Line Tool** | A standalone program that does one job well, built with AI help (vibe coding!) | Benchmark runner, data format converter, a small web app |
+        | Layer | Best for | Example |
+        |-------|----------|---------|
+        | **Skill / instructions** | Teaching the agent how to reason, ask questions, and coordinate steps | Paper reproduction workflow, experiment design guide |
+        | **CLI / scripts** | Deterministic repeated actions | Benchmark runner, data converter, simulation launcher |
+        | **MCP server** | Connecting the agent to external services or data | Lab database search, arXiv/Zotero lookup, notebook control |
+        | **Tests / evaluation** | Checking that generated code and workflow outputs are trustworthy | Regression tests, examples, review checklists |
+        | **Docs / onboarding** | Helping users and agents enter the workflow quickly | Setup guide, examples, domain notes, starter prompts |
   - type: dropdown
-    id: project-type
+    id: harness-type
     attributes:
-      label: Project Type
-      description: What type of project will you build?
+      label: Primary Harness Type
+      description: What is the main thing you want to build?
       options:
-        - Skill — an interactive AI workflow with multiple steps
-        - MCP Server — connect AI to outside data sources or services
-        - Command Line Tool — a standalone program built with AI help (vibe coding)
+        - Full harness system - knowledge base + tools + skills + onboarding design
+        - Skill / instruction layer - reusable agent workflow
+        - CLI or script - deterministic tool the agent can call
+        - MCP server - external data or service integration
+        - Test / evaluation harness - checks, examples, and review loops
+        - Onboarding / education workflow - guide users through a complex project
+        - Not sure yet
     validations:
       required: true
   - type: textarea
-    id: description
+    id: project-goal
     attributes:
-      label: Description
-      description: What does this project do? What research task does it help with?
-      placeholder: "Describe what your project does and which research task it makes easier..."
+      label: Project Goal
+      description: What project, workflow, or research task do you want this harness to support?
+      placeholder: "Describe the project and the concrete workflow you want to make easier, faster, or more reliable..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: planned-components
+    attributes:
+      label: Planned Components
+      description: Select the pieces you expect to build. It is fine if this changes during the event.
+      options:
+        - label: Knowledge base, examples, or domain notes
+        - label: Skill file or agent instructions
+        - label: Command line scripts, Makefile targets, or a small CLI
+        - label: MCP server or external service integration
+        - label: Tests, checks, evaluation cases, or review prompts
+        - label: Setup guide, tutorial, or onboarding flow
+        - label: Demo repo, sample data, or reproducible example
+  - type: textarea
+    id: before-event-plan
+    attributes:
+      label: Before-Event Plan
+      description: What will you prepare before coming to the event?
+      placeholder: "Examples: install Codex/Claude Code, confirm login, collect sample data, write one example task, identify APIs/tools, create a starter repo..."
     validations:
       required: true
   - type: dropdown
     id: target-tool
     attributes:
-      label: Target Tool
-      description: Which AI coding tool will this be built for?
+      label: Target AI Coding Tool
+      description: Which AI coding tool do you expect to use?
       options:
-        - Claude Code
         - Codex CLI
+        - Claude Code
         - OpenCode
-        - Any / Tool-agnostic
+        - Any / tool-agnostic
+        - Not sure yet
     validations:
       required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Participation Readiness
+      description: Please check what you have already prepared.
+      options:
+        - label: I have access to a Bash or Zsh terminal. Windows users can use WSL 2.
+        - label: I have installed Codex CLI, Claude Code, or another AI coding tool.
+        - label: I have tried logging in to my AI coding tool before the event.
+        - label: I have a concrete workflow, sample input, or starter repo to work on.
+  - type: textarea
+    id: team
+    attributes:
+      label: Team / Contact
+      description: Who is working on this? Add names, GitHub handles, email, or "looking for teammates".
+      placeholder: "Name(s), GitHub handle(s), and whether you are looking for teammates..."
+    validations:
+      required: false
