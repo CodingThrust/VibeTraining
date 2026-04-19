@@ -18,6 +18,12 @@ VibeYoga is a hands-on hackathon series at HKUST(GZ). Teams bring a real researc
 
 We encourage participants to **propose the workflow you want to automate** and **set up AI agent tools** before each hackathon edition.
 
+Before finalizing a project idea, please use the [`reflect`](https://github.com/CodingThrust/VibeTraining/blob/main/.claude/skills/reflect/SKILL.md) skill to stress-test it — it walks you through prior art, uniqueness, user value, MVP scope, and the skill-vs-program choice. Copy this prompt into Claude Code:
+
+```
+Please use the reflect skill to critically evaluate my project idea.
+```
+
 <a href="https://github.com/CodingThrust/VibeTraining/issues/new?template=project-idea.yml" class="btn">Propose a Harness</a>
 <a href="setup-guide" class="btn">Setup Environment</a>
 <a href="gallery" class="btn">Browse Gallery</a>
