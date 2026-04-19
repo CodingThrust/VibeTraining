@@ -1,0 +1,20 @@
+[package]
+name = "{{CRATE_NAME}}-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI for {{CRATE_NAME}}"
+license = "{{LICENSE_SPDX}}"
+repository = "https://github.com/{{GH_OWNER}}/{{GH_REPO}}"
+
+[[bin]]
+name = "{{CLI_BIN_NAME}}"
+path = "src/main.rs"
+
+[dependencies]
+{{CRATE_NAME}} = { version = "0.1.0", path = ".." }
+clap = { version = "4", features = ["derive"] }
+clap_complete = "4"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+owo-colors = { version = "4", features = ["supports-colors"] }

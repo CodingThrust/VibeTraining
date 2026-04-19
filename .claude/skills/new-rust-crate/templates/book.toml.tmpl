@@ -1,0 +1,18 @@
+[book]
+title = "{{CRATE_NAME}}"
+authors = ["{{AUTHOR_NAME}}"]
+description = "{{CRATE_DESCRIPTION}}"
+language = "en"
+src = "docs/src"
+
+[output.html]
+default-theme = "navy"
+git-repository-url = "https://github.com/{{GH_OWNER}}/{{GH_REPO}}"
+edit-url-template = "https://github.com/{{GH_OWNER}}/{{GH_REPO}}/edit/main/{path}"
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.search]
+enable = true

@@ -1,0 +1,63 @@
+# Makefile for {{CRATE_NAME}}
+
+.PHONY: help build test fmt fmt-check clippy doc mdbook coverage clean check release cli cli-run
+
+# Default target
+help:
+	@echo "Available targets:"
+	@echo "  build        - Build the project (workspace)"
+	@echo "  test         - Run all tests"
+	@echo "  fmt          - Format code with rustfmt"
+	@echo "  fmt-check    - Check code formatting"
+	@echo "  clippy       - Run clippy lints (-D warnings)"
+	@echo "  doc          - Build mdBook documentation"
+	@echo "  mdbook       - Build and serve mdBook (live reload)"
+	@echo "  coverage     - Generate coverage report (requires cargo-llvm-cov)"
+	@echo "  check        - Quick pre-commit check (fmt-check + clippy + test)"
+	@echo "  clean        - Clean build artifacts"
+	@echo "  cli          - Build the {{CLI_BIN_NAME}} CLI"
+	@echo "  cli-run      - Run the {{CLI_BIN_NAME}} CLI with ARGS (e.g. make cli-run ARGS='hello')"
+	@echo "  release V=x.y.z - Tag vX.Y.Z and push (triggers release workflow)"
+
+build:
+	cargo build --workspace
+
+test:
+	cargo test --workspace
+
+fmt:
+	cargo fmt --all
+
+fmt-check:
+	cargo fmt --all -- --check
+
+clippy:
+	cargo clippy --workspace --all-targets -- -D warnings
+
+doc:
+	mdbook build
+
+mdbook:
+	mdbook serve --open
+
+coverage:
+	cargo llvm-cov --workspace --lcov --output-path lcov.info
+
+clean:
+	cargo clean
+	rm -rf book lcov.info
+
+check: fmt-check clippy test
+
+cli:
+	cargo build -p {{CRATE_NAME}}-cli --release
+
+cli-run:
+	cargo run -p {{CRATE_NAME}}-cli -- $(ARGS)
+
+release:
+ifndef V
+	$(error V is required. Usage: make release V=0.1.0)
+endif
+	git tag -a v$(V) -m "Release v$(V)"
+	git push origin v$(V)

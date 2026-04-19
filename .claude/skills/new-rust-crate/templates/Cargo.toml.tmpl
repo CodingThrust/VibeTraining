@@ -1,0 +1,23 @@
+[workspace]
+members = [".", "{{CRATE_NAME}}-cli"]
+resolver = "2"
+
+[package]
+name = "{{CRATE_NAME}}"
+version = "0.1.0"
+edition = "2021"
+description = "{{CRATE_DESCRIPTION}}"
+license = "{{LICENSE_SPDX}}"
+repository = "https://github.com/{{GH_OWNER}}/{{GH_REPO}}"
+authors = ["{{AUTHOR_NAME}} <{{AUTHOR_EMAIL}}>"]
+keywords = []
+categories = []
+
+[dependencies]
+
+[dev-dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

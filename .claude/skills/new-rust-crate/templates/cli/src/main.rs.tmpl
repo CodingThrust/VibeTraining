@@ -1,0 +1,30 @@
+//! {{CRATE_NAME}} CLI.
+
+use clap::{Parser, Subcommand};
+
+#[derive(Parser)]
+#[command(name = "{{CLI_BIN_NAME}}", version, about = "{{CRATE_DESCRIPTION}}")]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    /// Print a greeting and exit.
+    Hello {
+        /// Name to greet.
+        #[arg(default_value = "world")]
+        name: String,
+    },
+}
+
+fn main() -> anyhow::Result<()> {
+    let cli = Cli::parse();
+    match cli.command {
+        Commands::Hello { name } => {
+            println!("hello, {name}");
+            Ok(())
+        }
+    }
+}

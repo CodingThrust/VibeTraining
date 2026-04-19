@@ -1,0 +1,31 @@
+# CLAUDE.md
+
+## Project Overview
+{{CRATE_DESCRIPTION}}
+
+## Philosophy
+- **Simple logic, maximum reuse.** Prefer straightforward code with fewer branches.
+  Reuse existing logic rather than adding ad-hoc special cases.
+- **Root-cause fixes over patches.** When a bug surfaces, trace it to its origin.
+- **Tests over implementation.** Spend more time designing tests than implementing code.
+
+## Commands
+```bash
+make help        # List all Makefile targets
+make build       # Build workspace
+make test        # Run all tests
+make check       # fmt-check + clippy + test (pre-commit gate)
+make cli         # Build the {{CLI_BIN_NAME}} CLI (release)
+make mdbook      # Serve docs locally
+make coverage    # Generate lcov.info
+make release V=x.y.z  # Tag and push, triggers release workflow
+```
+
+## Git Safety
+- **NEVER force push** to main (`--force`, `-f`, `--force-with-lease`).
+- Never skip hooks (`--no-verify`) or bypass signing unless explicitly asked.
+- Always create new commits instead of amending published ones.
+
+## Architecture
+Fill in once the crate takes shape. Describe the main modules, what each is
+responsible for, and how data flows between them.

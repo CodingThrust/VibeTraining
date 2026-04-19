@@ -1,0 +1,40 @@
+# {{CRATE_NAME}}
+
+[![CI](https://github.com/{{GH_OWNER}}/{{GH_REPO}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{GH_OWNER}}/{{GH_REPO}}/actions/workflows/ci.yml)
+[![Docs](https://github.com/{{GH_OWNER}}/{{GH_REPO}}/actions/workflows/docs.yml/badge.svg)](https://{{GH_OWNER}}.github.io/{{GH_REPO}}/)
+[![Crates.io](https://img.shields.io/crates/v/{{CRATE_NAME}}.svg)](https://crates.io/crates/{{CRATE_NAME}})
+[![Codecov](https://codecov.io/gh/{{GH_OWNER}}/{{GH_REPO}}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{GH_OWNER}}/{{GH_REPO}})
+[![License](https://img.shields.io/badge/license-{{LICENSE}}-blue.svg)](./LICENSE)
+
+{{CRATE_DESCRIPTION}}
+
+## Quick start
+
+```toml
+[dependencies]
+{{CRATE_NAME}} = "0.1"
+```
+
+```rust
+use {{CRATE_NAME}};
+// TODO: example once public API lands
+```
+
+## CLI
+
+```bash
+cargo install {{CRATE_NAME}}-cli
+{{CLI_BIN_NAME}} hello world
+```
+
+## Development
+
+```bash
+make check       # fmt-check + clippy + test
+make mdbook      # preview docs locally at http://localhost:3000
+make coverage    # generate lcov.info
+```
+
+## License
+
+Licensed under {{LICENSE_SPDX}}.

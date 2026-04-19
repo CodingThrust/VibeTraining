@@ -1,0 +1,19 @@
+/target
+/book
+Cargo.lock.bak
+*.pdb
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+lcov.info
+tarpaulin-report.*
+*.profraw
+
+# mdBook
+/docs/book
